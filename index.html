@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hero-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-container {
+        position: relative;
+        padding: 0;
+      }
+      .hero {
+        background-image: url("materials/blackbike\ 1\(1\).png");
+        background-size: cover; /* Cover the entire background */
+        background-position: 40%; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repeating the image */
+      }
+      .title_1 {
+        color: #ffffff;
+        font-size: 140px;
+        text-align: center;
+        padding: 0;
+        line-height: 1;
+      }
+      .subtitle_1 {
+        color: #89e63f;
+        padding: 0;
+        font-size: 70px;
+        text-align: center;
+        line-height: 0.5;
+      }
+      body {
+        font-family: "Bebas Neue", sans-serif;
+      }
+      .input {
+        background-color: #181818;
+        color: #a8a8a8;
+        border: none;
+        width: 326px;
+        height: 67px;
+        text-align: center;
+        border-radius: 1rem;
+        padding: 0;
+        margin-top: -3px;
+      }
+      .input::placeholder {
+        color: #a8a8a8;
+        opacity: 1; /* Ensure the color isn't faded */
+      }
+
+      .input:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #a8a8a8;
+      }
+
+      .input::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #a8a8a8;
+      }
+      .sub {
+        width: 326px;
+        height: 36px;
+        background-color: #98e043;
+        color: #000000;
+        border-radius: 1rem;
+        border: none;
+        padding: 0;
+        font-weight: bold;
+      }
+      .container {
+        margin-top: 10rem;
+      }
+      .butts {
+        width: 340px;
+      }
+      .butts .column {
+        padding: 0.75rem 0.2rem;
+      }
+      .butts .column:first-child {
+        padding-left: 0.75rem;
+      }
+      .butts .column:last-child {
+        padding-right: 0.75rem;
+      }
+      .but {
+        background-color: #171717;
+        border: none;
+        color: #747474;
+        transition: 0.2s;
+      }
+      .is-active svg {
+        filter: brightness(0) saturate(100%) invert(77%) sepia(8%)
+          saturate(3094%) hue-rotate(42deg) brightness(104%) contrast(90%);
+      }
+      .but:hover {
+        color: #98e043;
+      }
+
+      .svg-container:hover svg {
+        filter: brightness(0) saturate(100%) invert(77%) sepia(8%)
+          saturate(3094%) hue-rotate(42deg) brightness(104%) contrast(90%);
+      }
+      @media (max-width: 768px) {
+        .hero {
+          background-position: 18%;
+        }
+        .title_1 {
+          line-height: 0.6;
+        }
+        .sub {
+          width: 420px;
+          height: 87.73px;
+        }
+        .input {
+          width: 420px;
+        }
+        .centr {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 30rem;
+        }
+        .container {
+          margin-top: 0rem;
+        }
+        .butts {
+          width: 435px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero full-height">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column centr">
+              <span class="title_1">Race</span>
+              <br />
+              <span class="subtitle_1">Yourself</span>
+            </div>
+            <div class="column is-narrow form-container">
+              <form id="form" method="POST">
+                <div class="field">
+                  <label class="label"></label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="email"
+                      placeholder="Enter your email"
+                      name="Email"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="columns is-mobile is-centered butts">
+                    <div class="column is-one-third">
+                      <button
+                        type="button"
+                        class="button is-fullwidth but svg-container"
+                        data-value="Iphone"
+                        id="svg-placeholder-1"
+                      >
+                        <script>
+                          fetch("./materials/iphone.svg")
+                            .then((response) => response.text())
+                            .then((svg) => {
+                              document.getElementById(
+                                "svg-placeholder-1"
+                              ).innerHTML = svg;
+                            });
+                        </script>
+                      </button>
+                    </div>
+                    <div class="column is-one-third">
+                      <button
+                        type="button"
+                        class="button is-fullwidth but svg-container"
+                        data-value="Garmin"
+                        id="svg-placeholder-2"
+                      >
+                        <script>
+                          fetch("./materials/garmin.svg")
+                            .then((response) => response.text())
+                            .then((svg) => {
+                              document.getElementById(
+                                "svg-placeholder-2"
+                              ).innerHTML = svg;
+                            });
+                        </script>
+                      </button>
+                    </div>
+                    <div class="column is-one-third">
+                      <button
+                        type="button"
+                        class="button is-fullwidth but svg-container"
+                        data-value="Android"
+                        id="svg-placeholder-3"
+                      >
+                        <script>
+                          fetch("./materials/android.svg")
+                            .then((response) => response.text())
+                            .then((svg) => {
+                              document.getElementById(
+                                "svg-placeholder-3"
+                              ).innerHTML = svg;
+                            });
+                        </script>
+                      </button>
+                    </div>
+                    <input type="hidden" name="Device" id="gender-input" />
+                  </div>
+                </div>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <button class="button sub" type="submit" id="submit-button">
+                      Sign Up
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div
+                id="message"
+                style="
+                  display: none;
+                  margin: 20px;
+                  font-weight: bold;
+                  color: green;
+                  padding: 8px;
+                  background-color: beige;
+                  border-radius: 4px;
+                  border-color: aquamarine;
+                  position: absolute;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
